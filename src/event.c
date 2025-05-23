@@ -308,6 +308,8 @@ PHP_MINIT_FUNCTION(sdl_event)
 
 
 	// touchpad
+	zend_declare_property_null(php_sdl_event_ce, "tfinger", sizeof("tfinger") - 1, ZEND_ACC_PUBLIC);
+
 	zend_class_entry ce;
 	INIT_CLASS_ENTRY(ce, "SDL_TouchFingerEvent", NULL);
 	sdlTouchFingerEvent_ce = zend_register_internal_class(&ce);
