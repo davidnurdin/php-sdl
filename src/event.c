@@ -313,6 +313,17 @@ PHP_MINIT_FUNCTION(sdl_event)
 	sdlTouchFingerEvent_ce = zend_register_internal_class(&ce);
 
 
+    // Déclaration explicite des propriétés publiques
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "type", sizeof("type") - 1, ZEND_ACC_PUBLIC);
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "timestamp", sizeof("timestamp") - 1, ZEND_ACC_PUBLIC);
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "x", sizeof("x") - 1, ZEND_ACC_PUBLIC);
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "y", sizeof("y") - 1, ZEND_ACC_PUBLIC);
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "dx", sizeof("dx") - 1, ZEND_ACC_PUBLIC);
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "dy", sizeof("dy") - 1, ZEND_ACC_PUBLIC);
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "pressure", sizeof("pressure") - 1, ZEND_ACC_PUBLIC);
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "fingerId", sizeof("fingerId") - 1, ZEND_ACC_PUBLIC);
+    zend_declare_property_null(sdlTouchFingerEvent_ce, "touchId", sizeof("touchId") - 1, ZEND_ACC_PUBLIC);
+
 
 	return SUCCESS;
 }
